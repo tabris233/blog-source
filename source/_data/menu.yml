@@ -1,51 +1,41 @@
-- name: 开始
-  icon: fas fa-flag
-  url: /v2/getting-started/
+- name: 首页
+  icon: fas fa-home
+  url: /
+- name: 分类
+  icon: fas fa-folder-open
+  url: /categories/
+- name: 标签
+  icon: fas fa-tags
+  url: /tags/
+- name: 归档
+  icon: fas fa-archive
+  url: /archives/
+- name: 友链
+  icon: fas fa-link
+  url: /friends/
+- name: 关于
+  icon: fas fa-info-circle
+  url: /about/
 
-- name: 文档
+- name: 待整理
   icon: fas fa-book
   rows:
-    - name: 站点配置
-      icon: fas fa-globe-asia
-      url: /v2/site-settings/
-    - name: 主题配置
-      icon: fas fa-palette
-      url: /v2/theme-settings/
-    - name: 页面配置
-      icon: fas fa-file-alt
-      url: /v2/page-settings/
-    - name: 标签插件
-      icon: fas fa-pen-alt
-      url: /v2/tag-plugins/
-    - name: 进阶设定
-      icon: fas fa-flask
-      url: /v2/advanced-settings/
-
-- name: 帮助
-  icon: fas fa-question-circle
-  url: faqs/
-
-- name: 示例
-  icon: fas fa-play-circle
-  url: examples/
-
-
-
-- name: 更多
-  icon: fas fa-ellipsis-v
-  rows:
-    - name: 本站源码
-      url: https://github.com/xaoxuu/volantis-docs/
-    - name: 主题源码
-      url: https://github.com/xaoxuu/hexo-theme-volantis/
+    - name: 分类
+      icon: fas fa-folder-open
+      url: /categories/
     - name: hr
-    - name: 更新日志
-      url: https://github.com/xaoxuu/hexo-theme-volantis/releases/
+    - name: 标签
+      icon: fas fa-tags
+      url: /tags/
     - name: hr
-    - name: 特别感谢
-      url: contributors/
-    - name: 公告和测试文章
-      url: archives/
+    - name: 归档
+      icon: fas fa-archive
+      url: /archives/
     - name: hr
-    - name: 旧版文档 v2
-      url: /v2/getting-started/
+    - name: 友链
+      icon: fas fa-link
+      url: /friends/
+    - name: hr
+    - name: 关于
+      icon: fas fa-info-circle
+      url: /about/

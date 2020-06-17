@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Volantis
-subtitle: ''
-description: 'Volantis，一个高度模块化和可定制化、功能相对完善的Hexo博客主题，既可以用作个人博客，也适合用来搭建文档。'
-keywords: 'Volantis,Hexo,Hexo主题,Blog,博客'
-author: 'Mr. X'
+title: tabris的博客
+subtitle: 'IT互联网'
+description: 'With the low level of hard work of most people, there is no chance to fight for talent.'
+keywords: 'cpp,linux,algorithm'
+author: 'tabris'
 language: zh-CN
 timezone: ''
-avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+avatar: https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/avatar/avatar.jpg
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://volantis.js.org
+url: http://tabris.top
 root: /
 permalink: :title/
 permalink_defaults:
@@ -53,8 +53,8 @@ relative_link: false
 future: false
 highlight:
   enable: true
-  line_number: false
-  auto_detect: false
+  line_number: true
+  auto_detect: true
   tab_replace: '    '
   wrap: true
   hljs: false
@@ -102,67 +102,67 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: volantis
 # 覆盖主题配置
-theme_config:
-  style:
-    sidebar:
-      effect: [blur] # [shadow, floatable, blur]
-    body:
-      effect: [blur] # [shadow, floatable, blur]
-    color:
-      site_footer: '#fff'
-  cover:
-    search: '搜索文档'
-    features:
-      - name: 文档
-        icon: fas fa-book
-        url: /v2/getting-started/
-      - name: 博文
-        icon: fas fa-rss
-        url: /archives/
-      - name: 示例
-        icon: fas fa-play-circle
-        url: /examples/
-      - name: 源码
-        icon: fas fa-file-code
-        url: https://github.com/xaoxuu/hexo-theme-volantis/
-        rel: external nofollow noopener noreferrer
-        target: _blank
-      - name: 鸣谢
-        icon: fas fa-handshake
-        url: /contributors/
-  meta:
-    updated:
-      title: '本页文档最后更新于：'
-  comments:
-    title: <i class='fas fa-comments'></i> 用户交流区
-    subtitle: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
-    valine:
-      appId: FIKAgh6n0pUM08JXxhJHChVQ-MdYXbMMI
-      appKey: RJGiOYFc1fBvfox4frBPpRzU
-      meta: [nick, mail]
-      requiredFields: ['nick']
-      path: /
-      placeholder: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
-  footer:
-    layout: [aplayer, social, info, copyright]
-  plugins:
-    comment_typing: false
-    backstretch:
-    #   enable: false
-      position: fixed
-      images:               # For personal use only. At your own risk if used for commercial purposes !!!
-        - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg
-        - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg
-        - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg
-        - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg
-        # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/35F12181-F0E9-45BD-B134-37E4B4A660CF.jpeg
-    aplayer:
-      autoplay: true
-      volume: 0.4
-      order: random
-      # id: 4917530132 # vol red
-      # id: 4917524698 # vol blue
-      id: 76244489 # vol white
+# theme_config:
+#   style:
+#     sidebar:
+#       effect: [blur] # [shadow, floatable, blur]
+#     body:
+#       effect: [blur] # [shadow, floatable, blur]
+#     color:
+#       site_footer: '#fff'
+#   cover:
+#     search: '搜索文档'
+#     features:
+#       - name: 文档
+#         icon: fas fa-book
+#         url: /v2/getting-started/
+#       - name: 博文
+#         icon: fas fa-rss
+#         url: /archives/
+#       - name: 示例
+#         icon: fas fa-play-circle
+#         url: /examples/
+#       - name: 源码
+#         icon: fas fa-file-code
+#         url: https://github.com/xaoxuu/hexo-theme-volantis/
+#         rel: external nofollow noopener noreferrer
+#         target: _blank
+#       - name: 鸣谢
+#         icon: fas fa-handshake
+#         url: /contributors/
+#   meta:
+#     updated:
+#       title: '本页文档最后更新于：'
+#   comments:
+#     title: <i class='fas fa-comments'></i> 用户交流区
+#     subtitle: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
+#     valine:
+#       appId: FIKAgh6n0pUM08JXxhJHChVQ-MdYXbMMI
+#       appKey: RJGiOYFc1fBvfox4frBPpRzU
+#       meta: [nick, mail]
+#       requiredFields: ['nick']
+#       path: /
+#       placeholder: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
+#   footer:
+#     layout: [aplayer, social, info, copyright]
+#   plugins:
+#     comment_typing: false
+#     backstretch:
+#     #   enable: false
+#       position: fixed
+#       images:               # For personal use only. At your own risk if used for commercial purposes !!!
+#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg
+#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg
+#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg
+#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg
+#         # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/35F12181-F0E9-45BD-B134-37E4B4A660CF.jpeg
+#     aplayer:
+#       autoplay: true
+#       volume: 0.4
+#       order: random
+#       # id: 4917530132 # vol red
+#       # id: 4917524698 # vol blue
+#       id: 76244489 # vol white
 
 
 # Deployment
@@ -170,10 +170,10 @@ theme_config:
 # npm install hexo-deployer-git --save
 deploy:
   - type: git
-    repo: git@github.com:xaoxuu/volantis.js.org.git
-    branch: master
-    message: "Github CI Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
-# ssh-keygen -t rsa -b 4096 -C "xaoxuu@gmail.com" -N "" -f deploy_key
+    repo:
+      github: git@github.com:tabris233/tabris233.github.io.git,master
+      coding: git@e.coding.net:tabrisdong/blog.git,master
+    message: "Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
 
 
 # 全局导入
@@ -206,8 +206,7 @@ all_minifier: false
 nofollow:
   enable: true
   exclude:
-  - xaoxuu.com
-  - volantis.js.org
+  - tabris.top
 
 # autoprefixer
 autoprefixer:

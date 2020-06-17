@@ -172,7 +172,7 @@ deploy:
   - type: git
     repo:
       github: git@github.com:tabris233/tabris233.github.io.git,master
-      coding: git@e.coding.net:tabrisdong/blog.git,master
+      # coding: git@e.coding.net:tabrisdong/blog.git,master
     message: "Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
 
 

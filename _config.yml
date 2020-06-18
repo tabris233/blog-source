@@ -170,7 +170,7 @@ theme: volantis
 # npm install hexo-deployer-git --save
 deploy:
   - type: git
-    repo: https://github.com/tabris233/tabris233.github.io.git
+    repo: git@github.com:tabris233/tabris233.github.io.git
     branch: master
       # coding: git@e.coding.net:tabrisdong/blog.git,master
     message: "Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"

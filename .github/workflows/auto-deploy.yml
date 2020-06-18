@@ -29,7 +29,7 @@ jobs:
         pwd
         ls -a
         npm install # 安装 node modules 相关依赖
-        bash themes/_config_volantis.sh
+        bash themes/config_volantis.sh
 
     # Deploy hexo blog website.
     - name: Deploy # step4

@@ -17,19 +17,18 @@ categories: 实用技能
 tags:
   - osx
 ---
+
 # osx 真香!
 
 > 公司给发了个MacBook Pro 然后就基本告别Manjaro了,
->
+> 
 > 这里介绍下使用osx的一些体验
-
-<!-- more -->
 
 ## 软件篇
 
 ### GUI软件
 
- **vscode**: 开源的编辑器, 体验很棒
+**vscode**: 开源的编辑器, 体验很棒
 
 **jetbrains tool box**: 管理jetbrains哪些ide和工程的,推荐
 
@@ -37,7 +36,7 @@ tags:
 
 **typora**: markdown编辑器, 单页 实时预览,很nice
 
-**proxifer**: 改代理用的软件.
+~~**proxifer**: 改代理用的软件.~~
 
 **Beyound Compare**: 文件比较工具, 本来不想用的, git的话 就直接`git diff`了, 但是公司好多代码还在`svn`上.
 
@@ -45,7 +44,11 @@ tags:
 
 **navicat**: 操作数据库的, 超级好用
 
-> mac独有分割线?
+**markText**: markdown编辑器, 挺好用的. 
+
+---
+
+> mac独有分割线
 
 **iina**: 看视频的软件,大多格式的都能放
 
@@ -62,6 +65,14 @@ tags:
 **karabiner**: 键盘映射工具
 
 **keycastr**:显示键盘按键的软件
+
+**GetPlainText**: 复制时删除样式.
+
+**bartender 3**: 整理menu bar的工具.
+
+**ForkLift**: finder 的替代品,  
+
+---
 
 ### Terminal软件
 
@@ -82,3 +93,7 @@ tags:
 **glances**: python实现的高级top工具,
 
 **docker**: mac的docker感觉和linux的不太一样 会有个应用程序在启动器里面..
+
+**ripgrep**: 搜索工具, 快
+
+**lsd**: ls的替代品, rust写的 好看又快

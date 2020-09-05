@@ -26,6 +26,10 @@ tags:
 >   最终选择了[hexo-theme-matery](https://codeload.github.com/blinkfox/hexo-theme-matery)主题,
 >
 >   但最艰难的博文迁移过程算是完成了,但仍然有很大瑕疵..
+>
+>   ---
+>
+>   之前迁移的版本瑕疵很大，挑了个时间重新爬了一遍， 这次的思路是登录后爬取`CSDN`的`Markdown`原文。
 
 <!-- more -->
 
@@ -55,7 +59,25 @@ expected variable end
 
 # CSDN博文迁移
 
+> 以下是**新**的迁移方法。 这次的思路是登录后爬取`CSDN`的`Markdown`原文。
 
+其实没啥好说的， 用这个代码就可以了。 
+
+
+
+[爬虫代码](https://github.com/tabris233/Spider/blob/master/csdn_out_md)
+
+
+
+**需要注意的是 我爬取的时候发现这个编辑页的链接在变， 这里可能要F12找下最新的。**
+
+**`https://blog-console-api.csdn.net/v1/editor/getArticle?id={blog_id}**`
+
+
+
+---
+
+> 以下是**旧**的迁移方法。
 
 我这里有`300+`篇博文在`csdn`上,所以很难人工迁移,所以选择`python`爬虫的方式爬取迁移,
 

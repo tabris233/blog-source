@@ -72,6 +72,12 @@ tags:
 
 **ForkLift**: finder 的替代品,  
 
+**Lemon**: 柠檬清理.
+
+**Get Plain Text**: 复制粘贴的时候清除格式
+
+**SwitchResX**: 快速修改屏幕分辨率的Mac软件
+
 ---
 
 ### Terminal软件
@@ -97,3 +103,9 @@ tags:
 **ripgrep**: 搜索工具, 快
 
 **lsd**: ls的替代品, rust写的 好看又快
+
+**nvm**: Node Version Manager, node版本管理工具, 好用
+
+**whistle**: 代理配置软件
+
+**mycli**: 好用的mysql客户端

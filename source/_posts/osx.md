@@ -30,7 +30,7 @@ tags:
 
 **vscode**: 开源的编辑器, 体验很棒
 
-**jetbrains tool box**: 管理jetbrains哪些ide和工程的,推荐
+~~**jetbrains tool box**: 管理jetbrains哪些ide和工程的,推荐~~
 
 **Chrome**: 浏览器, 依赖于它的很多插件, 换不了,  太费内存了...
 
@@ -42,9 +42,24 @@ tags:
 
 **onedrive**: 微软家的网盘, 跨平台同步的工具,
 
-**navicat**: 操作数据库的, 超级好用
+~~**navicat**: 操作数据库的, 超级好用.(收费软件，后来用sequal pro代替)~~
 
-**markText**: markdown编辑器, 挺好用的. 
+~~**markText**: markdown编辑器, 挺好用的.~~
+
+**[Fliqlo](https://fliqlo.com/)**: 好看翻页时钟屏保。
+
+**[Better And Better 2.0](https://www.better365.cn/bab2.html)**: Better And Better 2.0 将强大功能与优秀人机交互结合提升到一个崭新的高度。全面提升Mac触控板、鼠标、键盘使用，数百种动作手势、绘图手势与预设、脚本、快捷键完美协作，为你带来无与伦比的Mac操作体验。
+
+**[超级右键](https://www.better365.cn/irightmouse.html)**: 超级右键以优秀设计与丰富功能为Mac带来绝佳的使用体验，众多功能与右键融为一体，深得人心的设计，让你即刻进入高效的Mac使用体验，快、高效、便捷，效果出奇的好
+
+**[ishot](https://www.better365.cn/ishot.html)**: iShot堪称macOS上功能最为全面的截图、录屏工具，
+截图、长截图、多窗口截图、延时截图、标注、贴图、取色、录屏......
+
+**[自动切换输入法](https://www.better365.cn/AutoSwitchInput.html)**: 在自动切换输入法内，提前设置每个App对应的输入法，切换至该App时，将为您自动切换至为他设定好的输入法。
+
+**[键指如飞/FlyKey](https://www.better365.cn/FlyKey.html)**: 键指如飞默认使用双击Command显示当前App的所有快捷键
+
+**[rectangle](https://rectangleapp.com/)**: 桌面窗口管理。 
 
 ---
 

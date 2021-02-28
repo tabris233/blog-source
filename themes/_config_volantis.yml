@@ -372,9 +372,11 @@ footer:
       url: https://github.com/tabris233
     - icon: fas fa-headphones-alt
       url: https://music.163.com/#/user/home?id=63035382
-  copyright: '[Copyright © 2017-2020 tabris](http://tabris.top)'
+  info: '<a>粤ICP备 </a><a href="https://beian.miit.gov.cn" target="_blank"> 2021020563号</a>'
+  copyright: '[Copyright © 2017-2021 tabris](http://tabris.top)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
+
 
 
 ############################### SEO ###############################

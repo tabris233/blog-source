@@ -18,10 +18,12 @@ tags:
   - osx
 ---
 
+[TOC]
+
 # osx 真香!
 
 > 公司给发了个MacBook Pro 然后就基本告别Manjaro了,
-> 
+>
 > 这里介绍下使用osx的一些体验
 
 ## 软件篇
@@ -48,19 +50,6 @@ tags:
 
 **[Fliqlo](https://fliqlo.com/)**: 好看翻页时钟屏保。
 
-**[Better And Better 2.0](https://www.better365.cn/bab2.html)**: Better And Better 2.0 将强大功能与优秀人机交互结合提升到一个崭新的高度。全面提升Mac触控板、鼠标、键盘使用，数百种动作手势、绘图手势与预设、脚本、快捷键完美协作，为你带来无与伦比的Mac操作体验。
-
-**[超级右键](https://www.better365.cn/irightmouse.html)**: 超级右键以优秀设计与丰富功能为Mac带来绝佳的使用体验，众多功能与右键融为一体，深得人心的设计，让你即刻进入高效的Mac使用体验，快、高效、便捷，效果出奇的好
-
-**[ishot](https://www.better365.cn/ishot.html)**: iShot堪称macOS上功能最为全面的截图、录屏工具，
-截图、长截图、多窗口截图、延时截图、标注、贴图、取色、录屏......
-
-**[自动切换输入法](https://www.better365.cn/AutoSwitchInput.html)**: 在自动切换输入法内，提前设置每个App对应的输入法，切换至该App时，将为您自动切换至为他设定好的输入法。
-
-**[键指如飞/FlyKey](https://www.better365.cn/FlyKey.html)**: 键指如飞默认使用双击Command显示当前App的所有快捷键
-
-**[rectangle](https://rectangleapp.com/)**: 桌面窗口管理。 
-
 ---
 
 > mac独有分割线
@@ -69,7 +58,7 @@ tags:
 
 **itsycal**: 在menu bar上的时间点一下会出现日历
 
-**cheatsheet**: 长按`command`出现当前应用所有快捷键
+~~**cheatsheet**: 长按`command`出现当前应用所有快捷键, 用`键指如飞/FlyKey`代替了~~
 
 **iglance**: 在Mac menu bar上显示CPU内存网速电池等信息的小工具
 
@@ -83,9 +72,9 @@ tags:
 
 **GetPlainText**: 复制时删除样式.
 
-**bartender 3**: 整理menu bar的工具.
+**bartender 4**: 整理menu bar的工具.
 
-**ForkLift**: finder 的替代品,  
+**ForkLift**: finder 的替代品,
 
 **Lemon**: 柠檬清理.
 
@@ -93,13 +82,37 @@ tags:
 
 **SwitchResX**: 快速修改屏幕分辨率的Mac软件
 
+**[Better And Better 2.0](https://www.better365.cn/bab2.html)**: Better And Better 2.0 将强大功能与优秀人机交互结合提升到一个崭新的高度。全面提升Mac触控板、鼠标、键盘使用，数百种动作手势、绘图手势与预设、脚本、快捷键完美协作，为你带来无与伦比的Mac操作体验。
+
+**[超级右键](https://www.better365.cn/irightmouse.html)**: 超级右键以优秀设计与丰富功能为Mac带来绝佳的使用体验，众多功能与右键融为一体，深得人心的设计，让你即刻进入高效的Mac使用体验，快、高效、便捷，效果出奇的好
+
+**[ishot](https://www.better365.cn/ishot.html)**: iShot堪称macOS上功能最为全面的截图、录屏工具，
+截图、长截图、多窗口截图、延时截图、标注、贴图、取色、录屏......
+
+**[自动切换输入法](https://www.better365.cn/AutoSwitchInput.html)**: 在自动切换输入法内，提前设置每个App对应的输入法，切换至该App时，将为您自动切换至为他设定好的输入法。
+
+**[键指如飞/FlyKey](https://www.better365.cn/FlyKey.html)**: 键指如飞默认使用双击Command显示当前App的所有快捷键
+
+**[rectangle](https://rectangleapp.com/)**: 桌面窗口管理。
+
+
+**[pock](https://pock.dev/)**: 在触控栏中显示macOS程序坞
+
+![](https://camo.githubusercontent.com/401d36fc151b85b5c001acb6c026c4c33c86aea9949a73bd2bbab811678e9a77/68747470733a2f2f706f636b2e6465762f6173736574732f696d672f707265766965772f706f636b5f776964676574732e706e67)
+
+**[copyless 2](https://copyless.net/)**: 剪贴板管理器. 最多可以存储1000个最新剪辑
+
+**[Mos](https://github.com/Caldis/Mos)**: 一个用于在MacOS上平滑你的鼠标滚动效果的小工具, 让你的滚轮爽如触控板。
+
+**[Amphetamine](https://apps.apple.com/cn/app/amphetamine/id937984704?mt=12)**: 防睡眠软件。
+
 ---
 
 ### Terminal软件
 
 **iterm2**: mac下的终端模拟软件,**其实是GUI软件的,故意放在这里**
 
-**thefuck**: 帮忙修正手误导致的错误命令
+~~**thefuck**: 帮忙修正手误导致的错误命令~~
 
 **tmux**: 终端复用工具,
 
@@ -107,11 +120,11 @@ tags:
 
 **ranger**: 终端下的文件管理器,配置后能预览图片,显示压缩文件信息等, 加上类vi的操作方式,很奈斯
 
-**wtfutil**: 命令行下的仪表盘工具, 插件丰富,同时也可以自己开发提交pr, 比较推荐
+~~**wtfutil**: 命令行下的仪表盘工具, 插件丰富,同时也可以自己开发提交pr, 比较推荐~~
 
 **homebrew**: mac的软件包管理器, 一般好用吧, 用过pacman感觉其他的都不太行
 
-**glances**: python实现的高级top工具,
+**glances**: python实现的高级top工具, 之前有时候会崩，崩的时候用`htop`代替
 
 **docker**: mac的docker感觉和linux的不太一样 会有个应用程序在启动器里面..
 

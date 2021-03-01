@@ -26,6 +26,20 @@ tags:
 >
 > 这里介绍下使用osx的一些体验
 
+> [Mac tips - 打开【键盘重复按键】功能](https://blog.csdn.net/huhuijun123/article/details/84815267)
+>
+> 很多App 在 Mac 下长按某个键时只会触发一次。 比如在Sublime Text下， 用 Vim 模式来 操作时， 长按 「J」 时， 只会按下跳一行。 但是奇怪开了中文输入法后又可以一直往下跳。
+> 其实我们是可以用下面的命令来重新默认打开这个功能。
+> ```shell
+> defaults write -g ApplePressAndHoldEnabled -bool false
+> ```
+> 注销并重新登录系统使其更改生效。
+> 如果需要恢复长按键盘可以重音字符或非英文字符的功能，请打开终端窗口，运行以下命令：
+> ```shell
+> defaults delete -g ApplePressAndHoldEnabled
+> ```
+
+
 ## 软件篇
 
 ### GUI软件

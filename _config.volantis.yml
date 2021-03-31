@@ -129,7 +129,7 @@ comments:
     path: /
 
 sidebar:
-  for_page: [blogger, guide, post, category, tagcloud]
+  for_page: [blogger, guide, post, category, tagcloud, webinfo]
   for_post: [blogger, toc]
   widget_library:
     blogger:
@@ -263,7 +263,42 @@ sidebar:
       header:
         icon: fad fa-book
         title: 文档导航 v4.0
-
+    # webinfo widget
+    webinfo:
+      class: webinfo
+      display: [desktop, mobile]
+      header:
+        icon: fad fa-award # pro
+        title: 站点信息
+      type:
+        article:
+          enable: true
+          text: '文章数目：'
+          unit: '篇'
+        runtime:
+          enable: true
+          data: '2020/12/11'    # 填写建站日期
+          text: '已运行时间：'
+          unit: '天'
+        wordcount:
+          enable: true
+          text: '本站总字数：'   # 需要启用 wordcount
+          unit: '字'
+        visitcounter:
+          service: leancloud  # busuanzi, leancloud
+          siteuv:
+            enable: true
+            text: '本站访客数：'
+            unit: '人'
+          sitepv:
+            enable: true
+            text: '本站总访问量：'
+            unit: '次'
+        lastupd:
+          enable: true
+          friendlyShow: true    # 更友好的时间显示
+          text: '最后活动时间：'
+          unit: '日'
 
 
 site_footer:

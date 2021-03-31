@@ -145,8 +145,8 @@ neat_enable: true
 nofollow:
   enable: true
   exclude:
-  - xaoxuu.com
-  - volantis.js.org
+  - tabris.top
+  - blog.tabris.top
 
 # autoprefixer
 autoprefixer:

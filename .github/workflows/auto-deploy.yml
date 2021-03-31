@@ -42,6 +42,9 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         deploy_key: ${{ secrets.DEPLOY_PRIKEY }}
+        external_repository: tabris233/tabris233.github.io
+        publish_branch: master
+        publish_dir: ./public
         commit_message: ${{ github.event.head_commit.message }}
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'

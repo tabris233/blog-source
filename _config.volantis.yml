@@ -1,0 +1,363 @@
+use_cdn: false
+navbar:
+  logo: # choose [img] or [icon + title]
+    img:
+    icon: https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/avatar/avatar.jpg
+    title: Tabris
+  menu:
+    - name: 首页
+      icon: fas fa-home
+      url: /
+    - name: 分类
+      icon: fas fa-folder-open
+      url: /categories/
+    - name: 标签
+      icon: fas fa-tags
+      url: /tags/
+    - name: 归档
+      icon: fas fa-archive
+      url: /archives/
+    - name: 友链
+      icon: fas fa-link
+      url: /friends/
+    - name: 关于
+      icon: fas fa-info-circle
+      url: /about/
+
+    - name: 待整理
+      icon: fas fa-book
+      rows:
+        - name: 暗黑模式
+          icon: fas fa-moon
+          toggle: darkmode
+        - name: 分类
+          icon: fas fa-folder-open
+          url: /categories/
+        - name: hr
+        - name: 标签
+          icon: fas fa-tags
+          url: /tags/
+        - name: hr
+        - name: 归档
+          icon: fas fa-archive
+          url: /archives/
+        - name: hr
+        - name: 友链
+          icon: fas fa-link
+          url: /friends/
+        - name: hr
+        - name: 关于
+          icon: fas fa-info-circle
+          url: /about/
+
+
+cover:
+  # height_scheme: full # full, half
+  title: 'tabris blog'
+  subtitle: 'A Low Blog'
+  background: # https://bing.ioliu.cn/v1/rand?w=1920&h=1200
+  features:
+    - name: 首页
+      icon: fas fa-home
+      url: /
+    - name: 分类
+      icon: fas fa-folder-open
+      url: /categories/
+    - name: 标签
+      icon: fas fa-tags
+      url: /tags/
+    - name: 归档
+      icon: fas fa-archive
+      url: /archives/
+    - name: 友链
+      icon: fas fa-link
+      url: /friends/
+    - name: 关于
+      icon: fas fa-info-circle
+      url: /about/
+    # - name: 博客
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4f0.svg
+    #   url: /
+    # - name: 文档
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f516.svg
+    #   url: /v4/getting-started/
+    #   target: _self
+    # - name: 示例
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4af.svg
+    #   url: /examples/
+    # - name: 帮助
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4ac.svg
+    #   url: /faqs/
+    # - name: 鸣谢
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f497.svg
+    #   url: /contributors/
+    # - name: 归档
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f5c3.svg
+    #   url: /archives/
+    # - name: 源码
+    #   img: https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f9ec.svg
+    #   url: https://github.com/volantis-x/hexo-theme-volantis/
+    #   target: _self
+
+article:
+  preview:
+    scheme: landscape # landscape
+    # pin icon for post
+    pin_icon: # https://cdn.jsdelivr.net/gh/twitter/twemoji@13.0/assets/svg/1f4cc.svg
+    # auto generate title if not exist
+    auto_title: false # false, true
+    # auto generate excerpt if not exist
+    auto_excerpt: false # false, true
+    author: true
+    # show readmore button
+    readmore: auto # auto, always
+  body:
+    meta_library:
+      author:
+        avatar: https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/avatar/avatar.jpg
+        name: Tabris
+        url: /
+      updated:
+        title: '本页文档最后更新于：'
+
+
+comments:
+  service: valine
+  valine:
+    appId: XkeYrd6r1FrJXgASPvPJa9Hp-gzGzoHsz # your appId
+    appKey: de9Yfw8ns8xwf6S9eHOj82Wi # your appKey
+    path: /
+
+sidebar:
+  for_page: [blogger, guide, post, category, tagcloud]
+  for_post: [blogger, toc]
+  widget_library:
+    blogger:
+      class: blogger
+      display: [desktop, mobile] # [desktop, mobile]
+      avatar: https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/avatar/avatar.jpg
+      shape: rectangle # circle, rectangle
+      url: /about/
+      title: tabris's blog
+      subtitle: Tabris
+      jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
+      social:
+        - icon: fas fa-rss
+          url: /atom.xml
+        - icon: fas fa-envelope
+          url: mailto:tabris.dq@qq.com
+        - icon: fab fa-github
+          url: https://github.com/tabris233/
+        - icon: fas fa-headphones-alt
+          url: /
+    toc:
+      class: toc
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-list
+        title: 本文目录
+      list_number: true
+      min_depth: 2
+      max_depth: 5
+    post:
+      class: text
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-plus
+        title: 社区活动
+        url: /contributors/
+      content:
+        - '**如何让自己的文章收录到这里？**<br>官方网站是开源的，只要您的文章与 Hexo 博客搭建相关，就可以自助进行收录，详细的操作步骤请见：「[**发布与分享文章**](/contributors/#发布与分享文章)」。'
+    # 文档导航
+    guide:
+      class: grid
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-map-signs
+        title: 分类导航
+      fixed: true # 固定宽度
+      rows:
+        - name: 常见问题
+          icon: fas fa-question-circle
+          url: /faqs/
+        - name: 示例博客
+          icon: fas fa-play-circle
+          url: /examples/
+        - name: 特别感谢
+          icon: fas fa-handshake
+          url: /contributors/
+        - name: 测试博文
+          icon: fas fa-file-alt
+          url: /archives/
+        - name: 主题源码
+          icon: fas fa-file-code
+          url: https://github.com/volantis-x/hexo-theme-volantis/
+          rel: external nofollow noopener noreferrer
+          target: _blank
+        - name: 更新日志
+          icon: fas fa-tags
+          url: https://github.com/volantis-x/hexo-theme-volantis/releases/
+          rel: external nofollow noopener noreferrer
+          target: _blank
+
+    docs-volantis-latest:
+      class: group
+      display: [desktop, mobile] # [desktop, mobile]
+      seo_title: Volantis
+      header:
+        icon: fa fa-book
+        title: 文档导航 v4.0
+
+    # qrcode widget
+    qrcode:
+      class: qrcode
+      display: [desktop] # [desktop, mobile]
+      header:
+        icon: fas fa-mobile
+        title: 手机观看
+      height: #64px  # Automatic height if not set
+      fancybox: #true
+      images:
+        - https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
+
+    help:
+      class: page
+      display: [desktop, mobile]
+      header:
+        icon: fas fa-headset
+        title: 帮助
+      pid: faq
+      content: excerpt # excerpt, more, content
+
+    news:
+      class: list
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fas fa-exclamation-triangle
+        title: 近期公告
+      rows:
+        - name: 关于主题与文档的更新
+          icon: fas fa-info-circle
+          url: https://github.com/volantis-x/hexo-theme-volantis/issues/215
+        - name: 升级小助手
+          icon: fas fa-angle-double-up
+          url: /v3/getting-started/#升级小助手
+
+    docs-v2:
+      class: group
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fad fa-list-alt
+        title: 文档导航 v2
+
+    docs-v3:
+      class: group
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fad fa-list-alt
+        title: 文档导航 v3
+
+    docs-latest:
+      class: group
+      display: [desktop, mobile] # [desktop, mobile]
+      header:
+        icon: fad fa-book
+        title: 文档导航 v4.0
+
+
+
+site_footer:
+  # layout: [aplayer, social, source, analytics, copyright]
+  # copyright: '[Copyright © 2017-2021 Volantis Team](https://github.com/volantis-x/)'
+  # social:
+  #   - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/020-rss.svg
+  #     url: atom.xml
+  #   - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/029-github.svg
+  #     url: https://github.com/volantis-x/
+  #   - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/010-facebook.svg
+  #     url: /
+  #   - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/018-twitter.svg
+  #     url: /
+  #   - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/045-telegram.svg
+  #     url: /
+  #   - img: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org@1.1/icon/1322024-social-media/006-youtube.svg
+  #     url: /
+  layout: [aplayer, social, license, analytics, info, beian, copyright]
+  social:
+    - icon: fas fa-rss
+      url: atom.xml
+    - icon: fas fa-envelope
+      url: mailto:tabris.dq@qq.com
+    - icon: fab fa-github
+      url: https://github.com/tabris233
+    - icon: fas fa-headphones-alt
+      url: https://music.163.com/#/user/home?id=63035382
+  beian: '<a>粤ICP备 </a><a href="https://beian.miit.gov.cn" target="_blank"> 2021020563号</a>'
+  # site copyright
+  copyright: '[Copyright © 2017-2021 tabris](http://tabris.top)'
+  # You can add your own property here. (Support markdown, for example: br: '<br>')
+  br: '<br>'
+
+tag_plugins:
+  # {% note text %}
+  note: # style for default note:
+    iconfont: 'Font Awesome 5 Pro'
+
+plugins:
+  clipboard:
+    enable: true
+  fontawesome: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css
+  backstretch:
+    enable: false
+    images:               # For personal use only. At your own risk if used for commercial purposes !!!
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/016.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/019.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/033.jpg
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/052.jpg
+  parallax:
+    enable: true
+    images:
+      - https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/042.jpg
+  aplayer:
+    enable: true
+    autoplay: true
+    volume: 0.4
+    order: random
+    # id: 4917530132 # vol red
+    # id: 4917524698 # vol blue
+    # id: 76244489 # vol white
+    # id: 5135845906 # for Volantis 3.0
+    id: 3175833810 # TOP 30
+  darkmodejs:
+    enable: true
+
+analytics:
+  busuanzi: #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
+  leancloud:
+    app_id: GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI
+    app_key: 4xKBXGBj6BgecU62vff5rJHs
+    custom_api_server: # 一般不需要写，除非自定义了 API Server
+
+custom_css:
+  font_smoothing: true
+  sidebar:
+    effect: [shadow] # [shadow, floatable, blur]
+  body:
+    effect: [shadow] # [shadow, floatable, blur]
+  fontfamily:
+    logofont:
+      fontfamily: 'Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      name: 'Dosis'
+      url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@20.5.30/Dosis/Dosis-Medium.ttf
+      weight: normal
+      style: normal
+    bodyfont:
+      fontfamily: 'Dosis, "PingFang SC", "Microsoft YaHei", Helvetica, Arial'
+      name: 'Dosis'
+      url: https://cdn.jsdelivr.net/gh/volantis-x/cdn-fonts@20.5.30/Dosis/Dosis-Medium.ttf
+      weight: normal
+      style: normal
+
+rightmenu:
+  enable: true

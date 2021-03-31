@@ -31,6 +31,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
   - README.md
+  - '**/*.html'
   - manifest.json
   - start
   - CNAME
@@ -53,8 +54,8 @@ relative_link: false
 future: false
 highlight:
   enable: true
-  line_number: true
-  auto_detect: true
+  line_number: false
+  auto_detect: false
   tab_replace: '    '
   wrap: true
   hljs: false
@@ -84,7 +85,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: false
+updated_option: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -101,68 +102,6 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: volantis
-# 覆盖主题配置
-# theme_config:
-#   style:
-#     sidebar:
-#       effect: [blur] # [shadow, floatable, blur]
-#     body:
-#       effect: [blur] # [shadow, floatable, blur]
-#     color:
-#       site_footer: '#fff'
-#   cover:
-#     search: '搜索文档'
-#     features:
-#       - name: 文档
-#         icon: fas fa-book
-#         url: /v2/getting-started/
-#       - name: 博文
-#         icon: fas fa-rss
-#         url: /archives/
-#       - name: 示例
-#         icon: fas fa-play-circle
-#         url: /examples/
-#       - name: 源码
-#         icon: fas fa-file-code
-#         url: https://github.com/xaoxuu/hexo-theme-volantis/
-#         rel: external nofollow noopener noreferrer
-#         target: _blank
-#       - name: 鸣谢
-#         icon: fas fa-handshake
-#         url: /contributors/
-#   meta:
-#     updated:
-#       title: '本页文档最后更新于：'
-#   comments:
-#     title: <i class='fas fa-comments'></i> 用户交流区
-#     subtitle: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
-#     valine:
-#       appId: FIKAgh6n0pUM08JXxhJHChVQ-MdYXbMMI
-#       appKey: RJGiOYFc1fBvfox4frBPpRzU
-#       meta: [nick, mail]
-#       requiredFields: ['nick']
-#       path: /
-#       placeholder: 这里仅供用户之间进行交流，有任何疑问请前往GitHub提交Issue。在评论区进行提问将不会收到开发者的任何回复！
-#   footer:
-#     layout: [aplayer, social, info, copyright]
-#   plugins:
-#     comment_typing: false
-#     backstretch:
-#     #   enable: false
-#       position: fixed
-#       images:               # For personal use only. At your own risk if used for commercial purposes !!!
-#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg
-#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg
-#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg
-#         - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg
-#         # - https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/35F12181-F0E9-45BD-B134-37E4B4A660CF.jpeg
-#     aplayer:
-#       autoplay: true
-#       volume: 0.4
-#       order: random
-#       # id: 4917530132 # vol red
-#       # id: 4917524698 # vol blue
-#       id: 76244489 # vol white
 
 
 # Deployment
@@ -170,21 +109,26 @@ theme: volantis
 # npm install hexo-deployer-git --save
 deploy:
   - type: git
-    repo: git@github.com:tabris233/tabris233.github.io.git
+    repo: git@github.com:xaoxuu/volantis.js.org.git
+    # repo: git@xaoxuu.com:xaoxuu/volantis.git
     branch: master
-      # coding: git@e.coding.net:tabrisdong/blog.git,master
-    message: "Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
-
+    message: "Github CI Auto Builder at {{ now('YYYY-MM-DD HH:mm:ss Z') }}"
+# ssh-keygen -t rsa -b 4096 -C "me@xaoxuu.com" -N "" -f deploy_key
+# 生成一对: deploy_key, deploy_key.pub，其中 deploy_key 填到源码仓库的 Secrets 的 DEPLOY_KEY 中，deploy_key.pub 填到静态文件仓库的 Deploy keys 中。
 
 # 全局导入
 import:
   meta:
-  - "<meta name='theme-color' content='#FFFFFF'>"
+    - <meta name="msapplication-TileColor" content="#ffffff">
+    - <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/browserconfig.xml">
+    - <meta name="theme-color" content="#ffffff">
   link:
-  - "<link rel='shortcut icon' type='image/x-icon' sizes='16x16 32x32 48x48 64x64' href='/assets/favicon/favicon.ico'>"
-  - "<link rel='apple-touch-icon' type='image/png' sizes='180x180' href='/assets/favicon/favicon_180.png'>"
-  - "<link rel='mask-icon' color='#1BC3FB' href='/assets/favicon/favicon_180.png'>"
-  - "<link rel='manifest' href='/manifest.json'>"
+    - <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/apple-touch-icon.png">
+    - <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-32x32.png">
+    - <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon-16x16.png">
+    - <link rel="manifest" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/site.webmanifest">
+    - <link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    - <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/favicon/favicon.ico">
   # script:
 
 # https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap
@@ -193,20 +137,16 @@ sitemap:
   tag: false
   category: false
 
-# 图片懒加载  # hexo-lazyload-image    hexo-fs
-lazyload:
-  enable: true
-  onlypost: false
-  loadingImg: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/placeholder/c617bfd2497fcea598e621413e315c368f8d8e.svg
 
-# npm install hexo-all-minifier --save
-all_minifier: false
+# npm i hexo-neat
+neat_enable: true
 
 # hexo-autonofollow
 nofollow:
   enable: true
   exclude:
-  - tabris.top
+  - xaoxuu.com
+  - volantis.js.org
 
 # autoprefixer
 autoprefixer:
@@ -214,21 +154,21 @@ autoprefixer:
   - '*.min.css'
 
 # offline config passed to sw-precache.
-offline:
-  maximumFileSizeToCacheInBytes: 10485760
-  staticFileGlobs:
-    - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
-  stripPrefix: public
-  verbose: true
-  runtimeCaching:
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: cdn.jsdelivr.net
-    - urlPattern: /*
-      handler: cacheFirst
-      options:
-        origin: cdnjs.cloudflare.com
+#offline:
+#  maximumFileSizeToCacheInBytes: 10485760
+#  staticFileGlobs:
+#    - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+#  stripPrefix: public
+#  verbose: true
+#  runtimeCaching:
+#    - urlPattern: /*
+#      handler: cacheFirst
+#      options:
+#        origin: cdn.jsdelivr.net
+#    - urlPattern: /*
+#      handler: cacheFirst
+#      options:
+#        origin: cdnjs.cloudflare.com
 
 marked:
   gfm: true

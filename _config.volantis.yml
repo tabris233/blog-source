@@ -370,8 +370,8 @@ plugins:
 analytics:
   busuanzi: #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
   leancloud:
-    app_id: GCYDRKI6XRkyC7EuEhJv90ia-MdYXbMMI
-    app_key: 4xKBXGBj6BgecU62vff5rJHs
+    appId: XkeYrd6r1FrJXgASPvPJa9Hp-gzGzoHsz # your appId
+    appKey: de9Yfw8ns8xwf6S9eHOj82Wi # your appKey
     custom_api_server: # 一般不需要写，除非自定义了 API Server
 
 custom_css:

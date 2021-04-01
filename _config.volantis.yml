@@ -126,7 +126,6 @@ comments:
   valine:
     appId: XkeYrd6r1FrJXgASPvPJa9Hp-gzGzoHsz # your appId
     appKey: de9Yfw8ns8xwf6S9eHOj82Wi # your appKey
-    path: /
 
 sidebar:
   for_page: [blogger, guide, post, category, tagcloud, webinfo]

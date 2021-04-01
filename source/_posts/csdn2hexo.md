@@ -153,6 +153,6 @@ expected variable end
 
 ------
 
-最终迁移到了<https://tabris.top/categories/OJ算法题/>,
+最终迁移到了<https://blog.tabris.top/categories/OJ算法题/>,
 
 迁移脚本在这里[csdn2hexo](<https://github.com/tabris233/Spider/tree/master/csdn2hexo>)

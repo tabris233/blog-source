@@ -371,7 +371,7 @@ analytics:
   leancloud:
     app_id: XkeYrd6r1FrJXgASPvPJa9Hp-gzGzoHsz
     app_key: de9Yfw8ns8xwf6S9eHOj82Wi
-    custom_api_server: lcapi.tabris.top # 一般不需要写，除非自定义了 API Server
+    custom_api_server: https://lcapi.tabris.top # 一般不需要写，除非自定义了 API Server
 
 custom_css:
   font_smoothing: true

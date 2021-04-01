@@ -369,8 +369,8 @@ plugins:
 analytics:
   busuanzi: #https://cdn.jsdelivr.net/gh/volantis-x/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
   leancloud:
-    appId: XkeYrd6r1FrJXgASPvPJa9Hp-gzGzoHsz # your appId
-    appKey: de9Yfw8ns8xwf6S9eHOj82Wi # your appKey
+    app_id: XkeYrd6r1FrJXgASPvPJa9Hp-gzGzoHsz
+    app_key: de9Yfw8ns8xwf6S9eHOj82Wi
     custom_api_server: lcapi.tabris.top # 一般不需要写，除非自定义了 API Server
 
 custom_css:

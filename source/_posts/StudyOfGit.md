@@ -32,6 +32,7 @@ git工具下载地址，可以选择适合自己的操作系统：https://git-sc
 ,将目录拷贝添加到PATH变量后。
 __注意：与前面的值要用“;”号隔开__
 具体步骤：
+
 > 右键计算机-属性-高级系统设置-环境变量-PATH将目录添加到后面，%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;D:\Program Files\Git\bin
 
 安装完成后使用 ``git --version``命令查看一下git版本，测试是否安装、配置成功。
@@ -49,39 +50,42 @@ __注意：与前面的值要用“;”号隔开__
 
 #####创建代码库
 包括远程库（第三方平台）、本地库（存放代码信息）。
+
 - 创建远程库：根据第三方平台提示进行创建，一般都有步骤说明，按照说明来就好。
-创建完成后建议初始化一下仓库，
-可以在远程上根据提示，创建使用README.md文件初始化项目。
-也可以使用git命令：
-```
-git init
-echo "# HelloWorld" >> README.md
-git add README.md
-git commit -m "first commit"
-```
-建议使用前者，直接在第三方上创建。
+  创建完成后建议初始化一下仓库，
+  可以在远程上根据提示，创建使用README.md文件初始化项目。
+  也可以使用git命令：
+  
+  ```
+  git init
+  echo "# HelloWorld" >> README.md
+  git add README.md
+  git commit -m "first commit"
+  ```
+  
+  建议使用前者，直接在第三方上创建。
+
 - 创建本地仓库：有两种方法
-1、使用git命令
-``git init``
-2、android Studio中（这里使用AS为例，其它的IDEA、webStorm操作都一样）
-点击``VCS-import into version control-create git repository``
-会弹出选择仓库的路径，直接选当前项目就行，然后确定。
-创建完之后，找到项目路径会发现文件夹下多了个.git文件，这个就是存放代码的仓库。
-而且项目中的文件的名称都会变为红色，说明已经有仓库了，但是这些红色的项目文件，并没有加到本地仓库（.git仓库文件中）。
-__（关于颜色后面我会具体说，各种颜色代表的状态）__
+  1、使用git命令
+  ``git init``
+  2、android Studio中（这里使用AS为例，其它的IDEA、webStorm操作都一样）
+  点击``VCS-import into version control-create git repository``
+  会弹出选择仓库的路径，直接选当前项目就行，然后确定。
+  创建完之后，找到项目路径会发现文件夹下多了个.git文件，这个就是存放代码的仓库。
+  而且项目中的文件的名称都会变为红色，说明已经有仓库了，但是这些红色的项目文件，并没有加到本地仓库（.git仓库文件中）。
+  __（关于颜色后面我会具体说，各种颜色代表的状态）__
+
 - 关联本地和远程库
-关联就是把本地仓库的.git仓库文件，和远程（coding）创建的仓库联系起来，每次提交代码，将本地.git中代码，提交到远程库。
-使用命令：
-``git remote add origin [远程仓库地址]``
-如果是首次使用，会提示输入用户名+密码，用户名一般是邮箱，输错是关联不成功的。
-关联成功则无提示，接着输入命令
-``git push origin master``
-如果失败，很大可能是远程仓库已存在文件。可以执行
-``git push -f origin master``强制提交。
-提交过程是能看到进度的。
-提交完成后可以去平台上查看有没有代码就知道是否成功。
-
-
+  关联就是把本地仓库的.git仓库文件，和远程（coding）创建的仓库联系起来，每次提交代码，将本地.git中代码，提交到远程库。
+  使用命令：
+  ``git remote add origin [远程仓库地址]``
+  如果是首次使用，会提示输入用户名+密码，用户名一般是邮箱，输错是关联不成功的。
+  关联成功则无提示，接着输入命令
+  ``git push origin master``
+  如果失败，很大可能是远程仓库已存在文件。可以执行
+  ``git push -f origin master``强制提交。
+  提交过程是能看到进度的。
+  提交完成后可以去平台上查看有没有代码就知道是否成功。
 
 __注意：所有命令行操作必须使用cmd或者git bash定位到项目目录下__
 
@@ -115,10 +119,9 @@ __常用命令__
 绿色：已添加到本地仓库，没有进行commit push提交远程的。
 蓝色：修改已经提交到本地仓库的代码。
 
-
 #####常见问题
 
->有一种情况是提交/强制提交的时候出现
+> 有一种情况是提交/强制提交的时候出现
 
 ``
 error: src refspec master does not match any.
@@ -137,6 +140,7 @@ git push origin master``
 > 补充一个在提交过程中出现无法解决问题的办法
 
 如果在使用命令行操作时出现无法解决的错误，直接进入到项目文件，删除``.git``文件,然后右键该项目目录，或者使用cmd定位到该目录，重新执行
+
 ```
 git init  #初始化本地仓库
 git remote add origin [远程库地址]  #关联远程库
@@ -144,7 +148,9 @@ git add . #提交本地代码到本地仓库的暂存区
 git commit -m '[提交说明]' #提交本地代码到本地仓库，并附上提交说明
 git push -f origin master #强制推送到远程库
 ```
+
 ___
+
 关于这些只是对于刚入门的学习者有些帮助，在我学习的时候也遇到了好多坑，至今有些问题还能遇到，但是不至于手忙脚乱，起码知道问题出在了哪个环节。
 Git是一个很强大的版本控制工具，有很多功能，需要尝试去深入研究，希望学习者能够感受到他带来的便捷。
 
@@ -157,7 +163,6 @@ https方式每次都要输入密码，按照如下设置即可输入一次就不
 ```shell
 git config --global credential.helper cache
 ```
-
 
 如果想自己设置时间，可以这样做：
 
@@ -173,17 +178,13 @@ git config credential.helper 'cache --timeout=3600'
 git config --global credential.helper store
 ```
 
-
 增加远程地址的时候带上密码也是可以的。(推荐)
 
 ```shell
 http://yourname:password@git.oschina.net/name/project.git
 ```
 
-
 补充：使用客户端也可以存储密码的。
-
-
 
 如果你正在使用ssh而且想体验https带来的高速，那么你可以这样做： 切换到项目目录下 ：
 
@@ -193,7 +194,6 @@ cd projectfile/
 ```shell
 git remote rm origin
 ```
-
 
 增加https远程仓库地址
 

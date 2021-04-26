@@ -1,4 +1,4 @@
-```yaml
+---
 title: [TODO] redis 学习 基础数据结构篇 之 dict
 date: 2021-04-27 00:35:23
 description: ["redis 基础数据结构 - 字典。"]
@@ -20,7 +20,7 @@ tags:
   - dict
   - rehash
   - 渐进式 rehesh
-```
+---
 
 > 基于redis 6.2.1
 

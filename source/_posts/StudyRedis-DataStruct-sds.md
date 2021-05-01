@@ -1,8 +1,7 @@
 ---
 title: redis 学习 基础数据结构篇 之SDS
 date: 2021-04-17 21:47:23
-description: ["redis 基础数据结构 - 简单动态字符串。redis 3.2 版本更新了 sds 2.0， 本文简单总结下sds1.0，再总结下sds2.0.
-"]
+description: ["redis 基础数据结构 - 简单动态字符串。redis 3.2 版本更新了 sds 2.0， 本文简单总结下sds1.0，再总结下sds2.0."]
 toc: true
 author: tabris
 # 图片推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如:http://xxx.com/xxx.jpg

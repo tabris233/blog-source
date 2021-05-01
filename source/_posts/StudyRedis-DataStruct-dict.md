@@ -1,6 +1,6 @@
 ---
-title: [TODO] redis 学习 基础数据结构篇 之 dict
-date: 2021-04-27 00:35:23
+title: "【TODO】 redis 学习 基础数据结构篇 之 dict"
+date: 2021-04-29 22:35:23
 description: ["redis 基础数据结构 - 字典。"]
 toc: true
 author: tabris
@@ -32,7 +32,7 @@ tags:
 
 > 字典， 又称符号表（symbol table）、关联数组（associative array）或者映射（map）， 是一种用于保存键值对（key-value pair）的抽象数据结构。
 
-在字典中，一个键（key）和一个值（value）关联，关联上的键和值被称为键值对 
+在字典中，一个键（key）和一个值（value）关联，关联上的键和值被称为键值对
 
 很多语言都提供了字典的实现，如C++ STL中的map，python中的dict，Go中的map等等。C语言中并为提供字典实现，因此Redis自行实现了字典。
 
@@ -45,7 +45,7 @@ Redis中很多地方用到了字典，Redis的数据库，HASH类型等。
 ```c
 // hashtable 哈希表结构
 typedef struct dictht {
-    dictEntry **table;      // dictEntry 二维指针， 被当成指针数组用的。 
+    dictEntry **table;      // dictEntry 二维指针， 被当成指针数组用的。
     unsigned long size;     // 哈希表容量大小
     unsigned long sizemask; // 等于size-1， 方便位运算的
     unsigned long used;     // 哈希表使用的大小
@@ -62,7 +62,7 @@ typedef struct dictht {
 
 ```c
 // 哈希表节点， 也就是一个键值对
-typedef struct dictEntry {  
+typedef struct dictEntry {
     void *key;              // 键
     union {
         void *val;

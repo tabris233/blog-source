@@ -58,7 +58,7 @@ typedef struct dictht {
 
 `sizemask` 属性的值总是等于 `size - 1` ， 这个属性和哈希值一起决定一个键应该被放到 `table` 数组的哪个索引上面。
 
-采用的hash算法在`src/siphash.c` 中， 采用的hash算法 是 `SipHash 1-2` 本文并不展开介绍。
+采用的hash算法在`src/siphash.c` 中， 采用的hash算法 是 `SipHash 1-2` 本文并不展开介绍`SipHash 1-2`原理。
 
 ```c
 // 哈希表节点， 也就是一个键值对
@@ -85,7 +85,7 @@ typedef struct dictEntry {
 typedef struct dict {
     dictType *type;  // 字典类型 （用来支持不同类型的，暂时不用泰太过关注）
     void *privdata;  // 私有数据
-    dictht ht[2];    // 哈希表
+    dictht ht[2];    // 哈希表  这里有两个，ht[1] 是rehash的时候才用的
     long rehashidx;  // 是否rehash标记 /没有rehash的时候等于-1， rehash的时候为接下来要rehash的下标
     int16_t pauserehash; // 暂停rehash标记 /* If >0 rehashing is paused (<0 indicates coding error) */
 } dict;
@@ -116,20 +116,50 @@ typedef struct dict {
 
 除了 `ht[1]` 之外， 另一个和 rehash 有关的属性就是 `rehashidx` ： 它记录了 rehash 目前的进度， 如果目前没有在进行 rehash ， 那么它的值为 `-1` 。
 
+下图是一个完整的字典结构（普通状态下，没有进行rehash）：
 
+![](https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/PicGo/2021/05/01/20210501184352.png)
 
+## hash 算法
 
+TODO 感觉没啥好说的了。
 
-## hash冲突解决（链地址法）
+### hash冲突解决（链地址法）
+
+TODO 这个感觉也没啥好说的，太基础了。
 
 ## rehash 和 渐进式 rehash
 
+### rehash
+
+随着频繁的增删操作， 哈希表可能不够用了或者空间使用率变低了，这时候就需要进行扩容或缩容，也就是Redis的rehash过程。
+
+rehash过程很好理解，当哈希表需要扩容或缩容的时候，改变哈希表的大小，对所有元素重新 hash 后放到新的位置。
+
+以下图为例， 当字典使用率过低时，会进行缩容。按照used个数确定合适的容量生成一个新的。这时候将旧的哈希表（h[0]）中的数据重新hash放到新的哈希表中（h[1]）。
+
+![](https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/PicGo/2021/05/01/20210501184231.jpeg)
+
+同理当容量不足的时候，字典会进行扩容。容量大小会翻一倍（乘2）。也是一样生成一个新的。把旧的哈希表（h[0]）中的数据重新hash放到新的哈希表中（h[1]）。
+
+![IMG_E3060FCFC999-1.jpeg](https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/PicGo/2021/05/01/20210501222136.jpeg)
+
+⚠️注意， 如上图所示，给一个容量为4的哈希表添加键值对，然后再删一个，然后再添加一个。。。这样重复的删除再添加。 会一直rehash下去，每次都要进行大量的内存操作和数据结构的维护处理，想想Redis本身单进程的，这得慢成什么样子。 所以 Redis 在处理扩容缩容时有这样的策略。
+
+### 渐进式rehash
+
 ## dict重要API
+
+| 函数                 | 作用                                      | 时间复杂度                                                                            |
+| ------------------ | --------------------------------------- | -------------------------------------------------------------------------------- |
+| `dictCreate`       | 创建一个新的字典。                               | ![O(1)](https://box.kancloud.cn/2015-09-13_55f5139a8e88e.png)                    |
+| `dictAdd`          | 将给定的键值对添加到字典里面。                         | ![O(1)](https://box.kancloud.cn/2015-09-13_55f5139a8e88e.png)                    |
+| `dictReplace`      | 将给定的键值对添加到字典里面， 如果键已经存在于字典，那么用新值取代原有的值。 | ![O(1)](https://box.kancloud.cn/2015-09-13_55f5139a8e88e.png)                    |
+| `dictFetchValue`   | 返回给定键的值。                                | ![O(1)](https://box.kancloud.cn/2015-09-13_55f5139a8e88e.png)                    |
+| `dictGetRandomKey` | 从字典中随机返回一个键值对。                          | ![O(1)](https://box.kancloud.cn/2015-09-13_55f5139a8e88e.png)                    |
+| `dictDelete`       | 从字典中删除给定键所对应的键值对。                       | ![O(1)](https://box.kancloud.cn/2015-09-13_55f5139a8e88e.png)                    |
+| `dictRelease`      | 释放给定字典，以及字典中包含的所有键值对。                   | ![O(N)](https://box.kancloud.cn/2015-09-13_55f513a53880b.png) ， `N` 为字典包含的键值对数量。 |
 
 # 总结
 
-rehash
-
-```
-
-```
+字典中最重要的实现是 rehash 及其渐进式的方式。

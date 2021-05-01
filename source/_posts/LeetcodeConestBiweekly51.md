@@ -1,7 +1,7 @@
 ---
 title: LeetCode 第51场双周赛
 date: 2021-05-01 23:55:58
-description: ["LeetCode 第51场双周赛。。 菜"]
+description: ["LeetCode 第51场双周赛。。 菜死了啊"]
 toc: true
 author: tabris
 
@@ -49,7 +49,7 @@ public:
 
 # 5731. 座位预约管理系统
 
-数据结构题， 维护一个set就可以了 
+数据结构题， 维护一个set就可以了
 
 ```cpp
 class SeatManager {
@@ -105,13 +105,12 @@ public:
 不太会用set， 不会写c++的匿名函数，， 后面判断逻辑又少了， GG。
 
 ```cpp
-    bool cmp(vector<int>& a, vector<int>& b) {
-        return a[1] > b[1];
-    }
+bool cmp(vector<int>& a, vector<int>& b) {
+    return a[1] > b[1];
+}
 
 class Solution {
 public:
-
     vector<int> closestRoom(vector<vector<int>>& rooms, vector<vector<int>>& q) {
         vector<int> ans(q.size());
 

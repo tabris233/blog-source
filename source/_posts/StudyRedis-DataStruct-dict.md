@@ -1,5 +1,5 @@
 ---
-title: "【TODO】 redis 学习 基础数据结构篇 之 dict"
+title: "Redis 学习 基础数据结构篇 之 dict"
 date: 2021-04-29 22:35:23
 description: ["redis 基础数据结构 - 字典。"]
 toc: true
@@ -94,6 +94,7 @@ typedef struct dict {
 `type` 属性和 `privdata` 属性是针对不同类型的键值对， 为创建多态字典而设置的：
 
 - `type` 属性是一个指向 `dictType` 结构的指针， 每个 `dictType` 结构保存了一簇用于操作特定类型键值对的函数， Redis 会为用途不同的字典设置不同的类型特定函数。
+
 - 而 `privdata` 属性则保存了需要传给那些类型特定函数的可选参数。
   
   ```c

@@ -95,7 +95,8 @@ typedef struct dict {
 
 - `type` 属性是一个指向 `dictType` 结构的指针， 每个 `dictType` 结构保存了一簇用于操作特定类型键值对的函数， Redis 会为用途不同的字典设置不同的类型特定函数。
 - 而 `privdata` 属性则保存了需要传给那些类型特定函数的可选参数。
-- ```c
+  
+  ```c
   typedef struct dictType {
     // 计算哈希值的函数
     unsigned int (*hashFunction)(const void *key);
@@ -217,8 +218,6 @@ dictEntry *dictFind(dict *d, const void *key)
 2. 最多可遍历的空槽的个数`n*10`
 
 如果进行了这么多的遍历或rehash操作，函数则退出，如果rehash已经结束返回`0`，没有结束返回`1`。
-
-
 
 最后看下rehash的完整函数吧：
 

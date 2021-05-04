@@ -4,20 +4,13 @@ date: 2021-05-01 23:54:58
 description: ["LeetCode 第51场双周赛。。 菜死了啊"]
 toc: true
 author: tabris
-
 # 图片推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如:http://xxx.com/xxx.jpg
 img: https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/PicGo/2021/05/01/20210501233929.png
-
 # 如果top值为true,则会是首页推荐文章
-
 top: false
-
 # 如果要对文章设置阅读验证密码的话,就可以在设置password的值,该值必须是用SHA256加密后的密码,防止被他人识破
-
 password:
-
 # 本文章是否开启mathjax，且需要在主题的_config.yml文件中也需要开启才行
-
 mathjax: false
 summary:
 categories:

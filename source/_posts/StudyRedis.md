@@ -1,5 +1,5 @@
 ---
-title: redis 学习
+title: Redis 学习
 date: 2021-04-17 21:47:23
 description: ["redis学习,,,"]
 toc: true

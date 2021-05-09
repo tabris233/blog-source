@@ -23,8 +23,10 @@ tags:
 [TOC]
 
 > 这篇文章基本是抄来的。 好不要脸啊我。
-> 
+>
 > 带有空还是要自己整理一下。
+>
+> 基于 [Redis 6.2.1]([redis/redis at 6.2.1 (github.com)](https://github.com/redis/redis/tree/6.2.1))
 
 # SDS
 

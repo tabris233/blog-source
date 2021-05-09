@@ -26,7 +26,9 @@ tags:
   - 渐进式 rehesh
 ---
 
-> 基于redis 6.2.1
+[TOC]
+
+> 基于 [Redis 6.2.1]([redis/redis at 6.2.1 (github.com)](https://github.com/redis/redis/tree/6.2.1))
 
 # dict（字典）
 
@@ -96,7 +98,7 @@ typedef struct dict {
 - `type` 属性是一个指向 `dictType` 结构的指针， 每个 `dictType` 结构保存了一簇用于操作特定类型键值对的函数， Redis 会为用途不同的字典设置不同的类型特定函数。
 
 - 而 `privdata` 属性则保存了需要传给那些类型特定函数的可选参数。
-  
+
 ```c
 typedef struct dictType {
   // 计算哈希值的函数

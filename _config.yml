@@ -53,7 +53,7 @@ post_asset_folder: false
 relative_link: false
 future: false
 highlight:
-  enable: true
+  enable: false
   line_number: false
   auto_detect: false
   tab_replace: '    '
@@ -170,18 +170,18 @@ autoprefixer:
 #      options:
 #        origin: cdnjs.cloudflare.com
 
-marked:
-  gfm: true
-  pedantic: false
-  breaks: true
-  smartLists: true
-  smartypants: false
-  modifyAnchors: 0
-  autolink: true
-  sanitizeUrl: false
-  headerIds: true
-  prependRoot: false
-  external_link:
-    enable: true
-    exclude: []
-    nofollow: true
+lute:
+  gfm: true # Enabled by default
+  breaks: true # Enabled by default
+  header_id: true # Enabled by default
+  autolink: true # Enabled by default
+  emoji: false # Disabled by default
+  prepend_root: true # Disabled by default
+  sanitize: false # Disabled by default
+  lazyload: false # Disabled by default
+  lazyload_src: ''
+  github_todo_list: false # Disabled by default
+  github_todo_list_class: 'task-list'
+  fix_term_typo: true # Disabled by default
+  auto_space: true # Disabled by default
+  chinese_punct: true # Disabled by default

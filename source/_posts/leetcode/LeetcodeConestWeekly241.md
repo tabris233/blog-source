@@ -4,7 +4,6 @@ date: 2021-05-16 12:04:36
 description: ["LeetCode 第241场周赛。。 菜死了啊"]
 toc: true
 author: tabris
-# 图片推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如:http://xxx.com/xxx.jpg
 img: https://cdn.jsdelivr.net/gh/tabris233/cdn-assets/PicGo/2021/05/16/20210516113536.png
 # 如果top值为true,则会是首页推荐文章
 top: false
@@ -54,7 +53,7 @@ public:
 
 先判断下`1` 和`0`的个数是否是差值不大于1的. 否则无解。
 
-然后在分情况讨论下 看和`1010101` 或者 `0101010` 的差异个数， 除2 就是了。
+然后在分情况讨论下 看和`1010101` 或者 `0101010` 的差异个数， 除 2 就是了。
 
 ```cpp
 class Solution {
@@ -134,13 +133,13 @@ public:
             mp[num] ++;
         }
     }
-    
+
     void add(int index, int val) {
         mp[a2[index]] --;
         a2[index] += val;
         mp[a2[index]] ++;
     }
-    
+
     int count(int tot) {
         int ans = 0;
         for(auto a: a1) {
@@ -186,7 +185,7 @@ public:
                 }
                 ans[sum]++;
             }while(next_permutation(a.begin(), a.end()));
-            
+
             for(auto x: ans) printf("%d ", x); puts("");
         }
     }
@@ -202,7 +201,7 @@ public:
             // for(int j=1;j<=i;j++) printf("%d ", f[i][j]);puts("");
             // for(int j=1;j<=i;j++) printf("%d ", g[i][j]);puts("");
         }
-        
+
     }
     int rearrangeSticks(int n, int k) {
         // test();
